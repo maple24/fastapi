@@ -1,6 +1,3 @@
-[submodule "utils/rqm/CRQM"]
-	path = utils/rqm/CRQM
-	url = https://github.com/maple24/CRQM.git
 [submodule "utils/CRQM"]
 	path = utils/CRQM
 	url = https://github.com/maple24/CRQM.git
