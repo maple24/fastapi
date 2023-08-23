@@ -9,4 +9,6 @@ class ModelName(str, Enum):
     lenet = "lenet"
 
 
-print(ModelName.alexnet)
+print(ModelName.alexnet.name, ModelName.alexnet.value)
+for name in ModelName:
+    print(name.value, "-", name)

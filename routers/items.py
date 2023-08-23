@@ -6,6 +6,7 @@ from fastapi import Path, Query, Cookie, Header
 
 router = APIRouter()
 
+
 class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"
@@ -24,14 +25,13 @@ async def get_model(model_name: ModelName):
     return {"model_name": model_name, "message": "Have some residuals"}
 
 
-fake_items_db = [{"item_name": "Foo"}, {
-    "item_name": "Bar"}, {"item_name": "Baz"}]
+fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
 
 
 # query
 @router.get("/fakeitems/")
 async def read_fakeitem(skip: int = 0, limit: int = 10):
-    return fake_items_db[skip: skip + limit]
+    return fake_items_db[skip : skip + limit]
 
 
 @router.get("/fakeitems/{item_id}")
